@@ -23,4 +23,17 @@ class PredictionsController < ApplicationController
     r6 = rand(1..60)
     render json: {message: "Randomly generated numbers: #{r1},#{r2},#{r3},#{r4},#{r5},#{r6}"}
   end
+
+  def lyrics
+    index = 99
+    array = []
+    while  index > 0
+      puts "#{index} bottles of beer on the wall, #{index} bottles of beer."
+      puts "Take one down and pass it around, #{index-1} bottles of beer on the wall."
+      puts ""
+      index -=1
+    end
+    puts "No more bottles of beer on the wall, no more bottles of beer. 
+    Go to the store and buy some more, 99 bottles of beer on the wall."
+  end
 end
